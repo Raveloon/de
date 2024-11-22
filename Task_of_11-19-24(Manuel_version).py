@@ -5,99 +5,99 @@ list_adresler= {"199":"Ankara","200":"İstanbul","201":"İzmir"}
 list_fiyatlar= {"199":"1M", "200":"1.1M", "201":"2.5M"}
 list_alan= {"199":"120 Metrekare", "200":"250 Metrekare", "201": "175 Metrekare"}
 list_tip={"199":"Ev", "200":"Arsa", "201": "Ofis"}  
-id_yaratıcı = -1
+id_yaratici = -1
 
 alpha= ""
     
 while True  :
-    print("Yapılacak tercihi seçiniz")
-    wanted = int(input("Yeni Kayıt İçin 1,  \nMevcut Kayıtları Görmek İçin 2 Yazınız \n "))   
+    print("Yapilacak tercihi seciniz")
+    wanted = int(input("Yeni Kayit İcin 1,  \nMevcut Kayitlari Görmek İcin 2 Yaziniz \n "))   
     
 
     if wanted == 1 :
-        id_yaratıcı += 1 
-        id_value = id_yaratıcı
-        list_idler.update({f"{id_yaratıcı}":f"{id_value}"}) 
-        print("Öncelikle girilecek emlağın özelliklerini girmelisiniz : ")
-        emlak_tipi1=input("Emlak çeşidiniz nedir ? (ev,arsa,ofis,işyeri) ").lower()
+        id_yaratici += 1 
+        id_value = id_yaratici
+        list_idler.update({f"{id_yaratici}":f"{id_value}"}) 
+        print("Oncelikle girilecek emlagın özelliklerini girmelisiniz : ")
+        emlak_tipi1=input("Emlak cesidiniz nedir ? (ev,arsa,ofis,isyeri) ").lower()
         emlak_tipi = emlak_tipi1.capitalize()
         
                 
         if True :
             if emlak_tipi == "Ev" :
                
-               list_tip.update({f"{id_yaratıcı}":f"{emlak_tipi}"})
+               list_tip.update({f"{id_yaratici}":f"{emlak_tipi}"})
                
                adres=input(f"{emlak_tipi}inizin adresini giriniz :")
-               list_adresler.update({f"{id_yaratıcı}":f"{adres}"})
+               list_adresler.update({f"{id_yaratici}":f"{adres}"})
                
-               fiyat=input(f"{emlak_tipi}'nizin satılması veya kiralanmasını istediğiniz miktarı giriniz :")
-               list_fiyatlar.update({f"{id_yaratıcı}":f"{fiyat}"})
+               fiyat=input(f"{emlak_tipi}'nizin satilması veya kiralanmasini istediğiniz miktari giriniz :")
+               list_fiyatlar.update({f"{id_yaratici}":f"{fiyat}"})
                
-               alan=input(f"Sahip olduğunuz {emlak_tipi}'in kaç metrekare olduğunu giriniz :")
-               list_alan.update({f"{id_yaratıcı}":f"{alan}"})
+               alan=input(f"Sahip oldugunuz {emlak_tipi}'in kac metrekare oldugunu giriniz :")
+               list_alan.update({f"{id_yaratici}":f"{alan}"})
                
-               print("Emlağınız şu şekilde tanımlanıyor doğruluğunu kontrol ediniz : " )
+               print("Emlaginiz su sekilde tanimlaniyor dogrulugunu kontrol ediniz : " )
                
-               print(list_tip.get(f"{id_yaratıcı}"))
-               print(list_adresler.get(f"{id_yaratıcı}"))
-               print(list_fiyatlar.get(f"{id_yaratıcı}"))          
-               print(list_alan.get(f"{id_yaratıcı}"))
+               print(list_tip.get(f"{id_yaratici}"))
+               print(list_adresler.get(f"{id_yaratici}"))
+               print(list_fiyatlar.get(f"{id_yaratici}"))          
+               print(list_alan.get(f"{id_yaratici}"))
                
                
-               eminlik_değeri = input(" Kayıtınızdan eminseniz (k) yazınız \n Eğer Kayıdınızı hatalı yaptıysanız  (y)  yazınız\n Eğer sistemi kapatmak istiyorsanız (q) yazınız").capitalize()
+               eminlik_degeri = input(" Kayitinizdan eminseniz (k) yaziniz \n Eğer Kayidinizi hatali yaptiysaniz  (y)  yaziniz\n Eğer sistemi kapatmak istiyorsaniz (q) yazınız").capitalize()
                
-               if eminlik_değeri == "K" :
+               if eminlik_degeri == "K" :
                    
                    
                
                    pass
-               elif eminlik_değeri == "Y":
+               elif eminlik_degeri == "Y":
                    list_adresler.popitem()
                    list_alan.popitem()
                    list_fiyatlar.popitem()
                    list_idler.popitem()
                    list_tip.popitem()
-                   print("En son yaptığınız Kayıt silindi...\n\n\n")
+                   print("En son yaptiğiniz Kayıt silindi...\n\n\n")
                    
                    pass
                else : 
                    break
                
             elif emlak_tipi == "Arsa" :
-               list_tip.update({f"{id_yaratıcı}":f"{emlak_tipi}"})
+               list_tip.update({f"{id_yaratici}":f"{emlak_tipi}"})
                
-               adres=input(f"{emlak_tipi}nızın adresini giriniz :")
-               list_adresler.update({f"{id_yaratıcı}":f"{adres}"})
+               adres=input(f"{emlak_tipi}nizin adresini giriniz :")
+               list_adresler.update({f"{id_yaratici}":f"{adres}"})
                
-               fiyat=input(f"{emlak_tipi}'nizin satılması veya kiralanmasını istediğiniz miktarı giriniz")
-               list_fiyatlar.update({f"{id_yaratıcı}":f"{fiyat}"})
+               fiyat=input(f"{emlak_tipi}'nizin satilmasi veya kiralanmasini istediğiniz miktari giriniz")
+               list_fiyatlar.update({f"{id_yaratici}":f"{fiyat}"})
                
-               alan=input(f"Sahip olduğunuz {emlak_tipi}'in kaç metrekare olduğunu giriniz :")
-               list_alan.update({f"{id_yaratıcı}":f"{alan}"})
+               alan=input(f"Sahip oldugunuz {emlak_tipi}'in kaç metrekare oldugunu giriniz :")
+               list_alan.update({f"{id_yaratici}":f"{alan}"})
                
-               print("Emlağınız şu şekilde tanımlanıyor doğruluğunu kontrol ediniz : " )
+               print("Emlagınız su sekilde tanimlaniyor dogrulugunu kontrol ediniz : " )
                
-               print(list_tip.get(f"{id_yaratıcı}"))
-               print(list_adresler.get(f"{id_yaratıcı}"))
-               print(list_fiyatlar.get(f"{id_yaratıcı}"))          
-               print(list_alan.get(f"{id_yaratıcı}"))
+               print(list_tip.get(f"{id_yaratici}"))
+               print(list_adresler.get(f"{id_yaratici}"))
+               print(list_fiyatlar.get(f"{id_yaratici}"))          
+               print(list_alan.get(f"{id_yaratici}"))
                
                
-               eminlik_değeri = input(" Kayıtınızdan eminseniz (k) yazınız \n Eğer Kayıdınızı hatalı yaptıysanız  (y)  yazınız\n Eğer sistemi kapatmak istiyorsanız (q) yazınız").capitalize()
+               eminlik_degeri = input(" Kayitinizdan eminseniz (k) yaziniz \n Eğer Kayidinizi hatali yaptiysaniz  (y)  yaziniz\n Eğer sistemi kapatmak istiyorsaniz (q) yazınız").capitalize()
                
-               if eminlik_değeri == "K" :
+               if eminlik_degeri == "K" :
                    
                    
                
                    pass
-               elif eminlik_değeri == "Y":
+               elif eminlik_degeri == "Y":
                    list_adresler.popitem()
                    list_alan.popitem()
                    list_fiyatlar.popitem()
                    list_idler.popitem()
                    list_tip.popitem()
-                   print("En son yaptığınız Kayıt silindi...\n\n\n")
+                   print("En son yaptiğiniz Kayıt silindi...\n\n\n")
                    
                    pass
                else : 
@@ -106,39 +106,39 @@ while True  :
                
                
             elif emlak_tipi == "Ofis" :
-               list_tip.update({f"{id_yaratıcı}":f"{emlak_tipi}"})
+               list_tip.update({f"{id_yaratici}":f"{emlak_tipi}"})
                
-               adres=input(f"{emlak_tipi}inizin adresini giriniz :")
-               list_adresler.update({f"{id_yaratıcı}":f"{adres}"})
+               adres=input(f"{emlak_tipi}nizin adresini giriniz :")
+               list_adresler.update({f"{id_yaratici}":f"{adres}"})
                
-               fiyat=input(f"{emlak_tipi}'nizin satılması veya kiralanmasını istediğiniz miktarı giriniz")
-               list_fiyatlar.update({f"{id_yaratıcı}":f"{fiyat}"})
+               fiyat=input(f"{emlak_tipi}'nizin satilmasi veya kiralanmasini istediğiniz miktari giriniz")
+               list_fiyatlar.update({f"{id_yaratici}":f"{fiyat}"})
                
-               alan=input(f"Sahip olduğunuz {emlak_tipi}'in kaç metrekare olduğunu giriniz :")
-               list_alan.update({f"{id_yaratıcı}":f"{alan}"})
+               alan=input(f"Sahip oldugunuz {emlak_tipi}'in kaç metrekare oldugunu giriniz :")
+               list_alan.update({f"{id_yaratici}":f"{alan}"})
                
-               print("Emlağınız şu şekilde tanımlanıyor doğruluğunu kontrol ediniz : " )
+               print("Emlagınız su sekilde tanimlaniyor dogrulugunu kontrol ediniz : " )
                
-               print(list_tip.get(f"{id_yaratıcı}"))
-               print(list_adresler.get(f"{id_yaratıcı}"))
-               print(list_fiyatlar.get(f"{id_yaratıcı}"))          
-               print(list_alan.get(f"{id_yaratıcı}"))
+               print(list_tip.get(f"{id_yaratici}"))
+               print(list_adresler.get(f"{id_yaratici}"))
+               print(list_fiyatlar.get(f"{id_yaratici}"))          
+               print(list_alan.get(f"{id_yaratici}"))
                
                
-               eminlik_değeri = input(" Kayıtınızdan eminseniz (k) yazınız \n Eğer Kayıdınızı hatalı yaptıysanız  (y)  yazınız\n Eğer sistemi kapatmak istiyorsanız (q) yazınız").capitalize()
+               eminlik_degeri = input(" Kayitinizdan eminseniz (k) yaziniz \n Eğer Kayidinizi hatali yaptiysaniz  (y)  yaziniz\n Eğer sistemi kapatmak istiyorsaniz (q) yazınız").capitalize()
                
-               if eminlik_değeri == "K" :
+               if eminlik_degeri == "K" :
                    
                    
                
                    pass
-               elif eminlik_değeri == "Y":
+               elif eminlik_degeri == "Y":
                    list_adresler.popitem()
                    list_alan.popitem()
                    list_fiyatlar.popitem()
                    list_idler.popitem()
                    list_tip.popitem()
-                   print("En son yaptığınız Kayıt silindi...\n\n\n")
+                   print("En son yaptiğiniz Kayıt silindi...\n\n\n")
                    
                    pass
                else : 
@@ -148,39 +148,39 @@ while True  :
                
                
             elif emlak_tipi == "İşyeri" :
-               list_tip.update({f"{id_yaratıcı}":f"{emlak_tipi}"})
+               list_tip.update({f"{id_yaratici}":f"{emlak_tipi}"})
                
                adres=input(f"{emlak_tipi}inizin adresini giriniz :")
-               list_adresler.update({f"{id_yaratıcı}":f"{adres}"})
+               list_adresler.update({f"{id_yaratici}":f"{adres}"})
                
-               fiyat=input(f"{emlak_tipi}'nizin satılması veya kiralanmasını istediğiniz miktarı giriniz")
-               list_fiyatlar.update({f"{id_yaratıcı}":f"{fiyat}"})
+               fiyat=input(f"{emlak_tipi}'nizin satilması veya kiralanmasini istediğiniz miktari giriniz :")
+               list_fiyatlar.update({f"{id_yaratici}":f"{fiyat}"})
                
-               alan=input(f"Sahip olduğunuz {emlak_tipi}'in kaç metrekare olduğunu giriniz :")
-               list_alan.update({f"{id_yaratıcı}":f"{alan}"})
+               alan=input(f"Sahip oldugunuz {emlak_tipi}'in kac metrekare oldugunu giriniz :")
+               list_alan.update({f"{id_yaratici}":f"{alan}"})
                
-               print("Emlağınız şu şekilde tanımlanıyor doğruluğunu kontrol ediniz : " )
+               print("Emlagınız su sekilde tanimlaniyor dogrulugunu kontrol ediniz : " )
                
-               print(list_tip.get(f"{id_yaratıcı}"))
-               print(list_adresler.get(f"{id_yaratıcı}"))
-               print(list_fiyatlar.get(f"{id_yaratıcı}"))          
-               print(list_alan.get(f"{id_yaratıcı}"))
+               print(list_tip.get(f"{id_yaratici}"))
+               print(list_adresler.get(f"{id_yaratici}"))
+               print(list_fiyatlar.get(f"{id_yaratici}"))          
+               print(list_alan.get(f"{id_yaratici}"))
                
                
-               eminlik_değeri = input(" Kayıtınızdan eminseniz (k) yazınız \n Eğer Kayıdınızı hatalı yaptıysanız  (y)  yazınız\n Eğer sistemi kapatmak istiyorsanız (q) yazınız").capitalize()
+               eminlik_degeri = input(" Kayitinizdan eminseniz (k) yaziniz \n Eğer Kayidinizi hatali yaptiysaniz  (y)  yaziniz\n Eğer sistemi kapatmak istiyorsaniz (q) yazınız").capitalize()
                
-               if eminlik_değeri == "K" :
+               if eminlik_degeri == "K" :
                    
                    
                
                    pass
-               elif eminlik_değeri == "Y":
+               elif eminlik_degeri == "Y":
                    list_adresler.popitem()
                    list_alan.popitem()
                    list_fiyatlar.popitem()
                    list_idler.popitem()
                    list_tip.popitem()
-                   print("En son yaptığınız Kayıt silindi...\n\n\n")
+                   print("En son yaptiğiniz Kayıt silindi...\n\n\n")
                    
                    pass
                else : 
