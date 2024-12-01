@@ -108,9 +108,11 @@ def bucket_1_to_2 ():
             
     elif  value_20_ < value_11_ :
         for element in range(value_20_):
-            bucket_1.pop(1)
+            placement = bucket_1.index(1)
+            placement_0 = bucket_2.index(0)
+            bucket_1.pop(placement)
             bucket_1.append(0)
-            bucket_2.pop(0)
+            bucket_2.pop(placement_0)
             bucket_2.append(1)
             
     else :
@@ -134,9 +136,11 @@ def bucket_1_to_2_out ():
             
     elif  value_20_ < value_11_ :
         for element in range(value_20_):
-            bucket_1.pop(1)
+            placement = bucket_1.index(1)
+            placement_0 = bucket_2.index(0)
+            bucket_1.pop(placement)
             bucket_1.append(0)
-            bucket_2.pop(0)
+            bucket_2.pop(placement_0)
             bucket_2.append(1)
         bucket_1.clear()
         for element in range(3):
@@ -163,9 +167,11 @@ def bucket_1_to_3 ():
             
     elif  value_30_ < value_11_ :
         for element in range(value_30_):
-            bucket_1.pop(1)
+            placement = bucket_1.index(1)
+            placement_0 = bucket_3.index(0)
+            bucket_1.pop(placement)
             bucket_1.append(0)
-            bucket_3.pop(0)
+            bucket_3.pop(placement_0)
             bucket_3.append(1)
             
     else :
@@ -189,9 +195,11 @@ def bucket_1_to_3_out ():
             
     elif  value_30_ < value_11_ :
         for element in range(value_30_):
-            bucket_1.pop(1)
+            placement = bucket_1.index(1)
+            placement_0 = bucket_3.index(0)
+            bucket_1.pop(placement)
             bucket_1.append(0)
-            bucket_3.pop(0)
+            bucket_3.pop(placement_0)
             bucket_3.append(1)
         bucket_1.clear()
         for element in range(3):
@@ -218,8 +226,10 @@ def bucket_2_to_1 ():
     elif  value_21_ > value_10_ :
         for element in range(value_10_):
             placement = bucket_2.index(1)
+            placement_0 = bucket_1.index(0)
+            bucket_2.pop(placement)
             bucket_2.append(0)
-            bucket_1.pop(0)
+            bucket_1.pop(placement_0)
             bucket_1.append(1)
             
     else :
@@ -245,9 +255,10 @@ def bucket_2_to_1_out ():
     elif  value_21_ > value_10_ :
         for element in range(value_10_):
             placement = bucket_2.index(1)
+            placement_0 = bucket_1.index(0)
             bucket_2.pop(placement)
             bucket_2.append(0)
-            bucket_1.pop(0)
+            bucket_1.pop(placement_0)
             bucket_1.append(1)
         bucket_2.clear()
         for element in range(5):
@@ -274,8 +285,10 @@ def bucket_2_to_3 ():
     elif  value_21_ > value_30_ :
         for element in range(value_30_):
             placement = bucket_2.index(1)
+            placement_0 = bucket_3.index(0)
+            bucket_2.pop(placement)
             bucket_2.append(0)
-            bucket_3.pop(0)
+            bucket_3.pop(placement_0)
             bucket_3.append(1)
             
     else :
@@ -300,9 +313,10 @@ def bucket_2_to_3_out ():
     elif  value_21_ > value_30_ :
         for element in range(value_30_):
             placement = bucket_2.index(1)
+            placement_0 = bucket_3.index(0)
             bucket_2.pop(placement)
             bucket_2.append(0)
-            bucket_3.pop(0)
+            bucket_3.pop(placement_0)
             bucket_3.append(1)
         bucket_2.clear()
         for element in range(5):
@@ -328,9 +342,10 @@ def bucket_3_to_1 ():
     elif  value_31_ > value_10_ :
         for element in range(value_10_):
             placement = bucket_3.index(1)
+            placement_0 = bucket_1.index(0)
             bucket_3.pop(placement)
             bucket_3.append(0)
-            bucket_1.pop(0)
+            bucket_1.pop(placement_0)
             bucket_1.append(1)
             
     else :
@@ -355,9 +370,10 @@ def bucket_3_to_1_out ():
     elif  value_31_ > value_10_ :
         for element in range(value_10_):
             placement = bucket_3.index(1)
+            placement_0 = bucket_1.index(0)
             bucket_3.pop(placement)
             bucket_3.append(0)
-            bucket_1.pop(0)
+            bucket_1.pop(placement_0)
             bucket_1.append(1)
         bucket_3.clear()
         for element in range(9):
@@ -384,9 +400,10 @@ def bucket_3_to_2 ():
     elif  value_31_ > value_20_ :
         for element in range(value_20_):
             placement = bucket_3.index(1)
+            placement_0 = bucket_2.index(0)
             bucket_3.pop(placement)
             bucket_3.append(0)
-            bucket_2.pop(0)
+            bucket_2.pop(placement_0)
             bucket_2.append(1)
             
     else :
@@ -410,9 +427,10 @@ def bucket_3_to_2_out ():
     elif  value_31_ > value_20_ :
         for element in range(value_20_):
             placement = bucket_3.index(1)
+            placement_0 = bucket_2.index(0)
             bucket_3.pop(placement)
             bucket_3.append(0)
-            bucket_2.pop(0)
+            bucket_2.pop(placement_0)
             bucket_2.append(1)
         bucket_3.clear()
         for element in range(9):
@@ -462,31 +480,115 @@ def bucket_3_empty ():
 
 #--------------------------------------------------------------------start_of_choose_sequence
 
+while True:
+    
+    print("Tekrar çalıştırmak isterseniz (Y) girdisini giriniz :")
+    another_one = input("Tercihiniz :").capitalize()
+    
+    bucket_1.clear()
+    bucket_2.clear()
+    bucket_3.clear()
+    rolls.clear()
+    
+    generate_first_bucket()
+    generate_second_bucket()
+    generate_third_bucket()
+    print("-----generated-----")
+    
+    kova_1 = bucket_1.count(1)
+    kova_2 = bucket_2.count(1)
+    kova_3 = bucket_3.count(1)	
+    
 
-generate_first_bucket()
-generate_second_bucket()
-generate_third_bucket()
-print(bucket_1)
-print(bucket_2)
-print(bucket_3)
-bucket_3_empty()
-print(bucket_1)
-print(bucket_2)
-print(bucket_3)
-fill_second_bucket()
-print(bucket_1)
-print(bucket_2)
-print(bucket_3)
-bucket_1_to_3_out()
-print(bucket_1)
-print(bucket_2)
-print(bucket_3)
-bucket_2_to_3_out()
-print(bucket_1)
-print(bucket_2)
-print(bucket_3)
-print(f" \nSırası ile 1.nci , 2.nci ve 3.ncü kova için atılan zarlar {rolls}")
+               
+           
+    if kova_3 == 7:
+        print("3.ncü kova 7'ye eşit") #calisiyo
+        
+        
+    elif kova_1 + kova_3 == 7:
+        bucket_1_to_3_out()  #calisiyo+
+        
+        
+    elif kova_2 + kova_3 == 7:
+        bucket_2_to_3_out()  #calisiyo
+        
+        
+    elif kova_1 + kova_2 == 7: 
+        bucket_3_empty()      #calisiyo
+        bucket_1_to_3_out()
+        bucket_2_to_3_out()
+        
+        
+    elif kova_3 == 2:
+            kova_2 == 5
+            fill_second_bucket() #calisiyo+
+            bucket_2_to_3_out()
 
+            
+            
+    elif kova_3 == 4:
+            fill_first_bucket()  #calisiyo+
+            bucket_1_to_3_out()
+
+            
+    elif kova_2 == 4:
+            bucket_3_empty()
+            fill_first_bucket() 
+            bucket_1_to_3_out()  #calisiyo
+            bucket_2_to_3_out()
+
+
+            
+    elif kova_1 == 2:
+            bucket_3_empty()
+            fill_second_bucket()
+            bucket_1_to_3_out() #calisiyo
+            bucket_2_to_3_out()
+
+
+        
+    elif kova_2 == 2:
+            bucket_3_empty()
+            bucket_2_to_3_out()  #calisiyo+
+            fill_second_bucket()
+            bucket_2_to_3_out()
+
+          
+            
+    elif  kova_1 + kova_2 + kova_3 == 7:
+        bucket_1_to_3_out()
+        bucket_2_to_3_out() #calisiyo+
+        
+        
+    else :
+        if kova_3 == 9:
+            bucket_1_empty()
+            bucket_2_empty() #calisiyo
+            bucket_3_to_2()
+            fill_first_bucket()
+            bucket_1_to_3()
+
+        else :
+            bucket_1_empty()
+            bucket_2_empty()
+            bucket_3_empty()
+            fill_third_bucket() #calisiyo+
+            bucket_3_to_2()
+            fill_first_bucket()
+            bucket_1_to_3()
+    
+    kova_1_last = bucket_1.count(1)
+    kova_2_last = bucket_2.count(1)
+    kova_3_last = bucket_3.count(1)	
+    
+    print("-----done-----")
+    print("")
+    print(f"Son durum :\n1.Kova : {bucket_1} = {kova_1_last}\n2.Kova: {bucket_2} = {kova_2_last}\n3.Kova: {bucket_3} = {kova_3_last}")
+    
+
+
+    print(f"Sırası ile 1.nci , 2.nci ve 3.ncü kova için atılan zarlar {rolls}\n\n\n")
 
 
 
